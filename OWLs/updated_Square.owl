@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Rectangle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Polygon"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasOppositeSides">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="N5f70b7638a5d47b8ae622b31f7f4c6ba"/>
+    <rdfs:range rdf:nodeID="N480e1e20910c4f8a8816cccef96828ea"/>
+    <rdfs:comment>Represents the relationship between opposite sides of a rectangle being equal.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#isInscribedIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="N1f536ec81c1d4e348f868d7807059a40"/>
+    <rdfs:range rdf:nodeID="N89f00f3d727b46659fbc7568da0a7e51"/>
+    <rdfs:comment>Represents the relationship where a polygon is inscribed within a circle (e.g., a square inscribed in a circle).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Trapezoid">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Polygon"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasEccentricity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Ellipse"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:comment xml:lang="en">Eccentricity of an ellipse.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N89f00f3d727b46659fbc7568da0a7e51">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#isInscribedIn"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Circle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasSides">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/GeometricShape"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Hexagon"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Octagon"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Pentagon"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Polygon"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Rectangle"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Rhombus"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Square"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Trapezoid"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Triangle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:comment xml:lang="en">Number of sides for polygons (e.g., triangle has 3 sides, square has 4 sides).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasAngle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Hexagon"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Octagon"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Pentagon"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Polygon"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Rectangle"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Rhombus"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Square"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Trapezoid"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Triangle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:comment xml:lang="en">nternal angles of polygons (e.g., 90° for squares, 180° for triangles).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasPerimeter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Hexagon"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Octagon"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Pentagon"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Polygon"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Rectangle"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Rhombus"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Square"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Trapezoid"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Triangle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:comment xml:lang="en">Perimeter of the shape (e.g., rectangle, square).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/GeometricShape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasMinorAxis">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Ellipse"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:comment xml:lang="en">Minor axis of an ellipse.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasDiagonal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="N2d4df65bf3a942b98eca89e9a1515e8e"/>
+    <rdfs:domain rdf:nodeID="Naadf021d98704b9b955e2945c999da15"/>
+    <rdfs:domain rdf:nodeID="N571a0d0cf10847b18415cf6923497cdb"/>
+    <rdfs:range rdf:nodeID="N7832332be1b64030983665066ba89076"/>
+    <rdfs:comment>sents the diagonal of polygons like squares, rectangles, or rhombuses.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasDiameter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Circle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:comment xml:lang="en">Diameter of a circle.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasCenter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:domain rdf:nodeID="Nb6d162ec9c144ac2a4e2c0f8e13891a2"/>
+    <rdfs:range rdf:nodeID="Nc29a071917684c97a26e27d35921a86f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nae6ba4bcce5543aa8e013e9fe513e588">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasFoci"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Ellipse"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasAdjacentShape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:domain rdf:nodeID="Nc67ef402c2a34910a72f94c34f4d058d"/>
+    <rdfs:range rdf:nodeID="Nd61674b1afa84c3ab520344d74c9b52b"/>
+    <rdfs:comment>Represents the adjacency between two polygons (e.g., adjacent sides of a rectangle)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Pentagon">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Polygon"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#Point">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/GeometricShape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasRadius">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Circle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:comment xml:lang="en">Radius of a circle.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasFoci">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="Nae6ba4bcce5543aa8e013e9fe513e588"/>
+    <rdfs:range rdf:nodeID="N74f63bad96554d07ae8801505e08d724"/>
+    <rdfs:comment>Represents the foci of an ellipse.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Polygon">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/GeometricShape"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na084145f39054e3688f0a6b19af21421">
+    <rdf:first rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Rhombus"/>
+    <rdf:rest rdf:nodeID="Nb61cc0be7b674f46bb37b389a72463a2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N480e1e20910c4f8a8816cccef96828ea">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasOppositeSides"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Polygon"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2d4df65bf3a942b98eca89e9a1515e8e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasDiagonal"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+    <owl:onClass rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Rectangle"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nff7982e49e114ce0a0544e3bc32e98d4">
+    <rdf:first rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Octagon"/>
+    <rdf:rest rdf:nodeID="N9636c4122af942c7848137ef1d18bce5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N43174c4f20d14e71b50a49a288791df0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#isContainedIn"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/GeometricShape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/ellipse1">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Ellipse"/>
+    <hasMajorAxis rdf:datatype="http://www.w3.org/2001/XMLSchema#double">45.0</hasMajorAxis>
+    <hasMinorAxis rdf:datatype="http://www.w3.org/2001/XMLSchema#double">34.0</hasMinorAxis>
+    <hasArea rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4806.636759992383</hasArea>
+    <hasPerimeter rdf:datatype="http://www.w3.org/2001/XMLSchema#double">249.39023246483953</hasPerimeter>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd61674b1afa84c3ab520344d74c9b52b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#isContainedIn"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Polygon"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc457b13d84ec4d96848d42df0c449723">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="Na12f9697535346f78d2478e3635a810e"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/triangle1">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Triangle"/>
+    <hasBase rdf:datatype="http://www.w3.org/2001/XMLSchema#double">34.0</hasBase>
+    <hasBase rdf:datatype="http://www.w3.org/2001/XMLSchema#double">45.0</hasBase>
+    <hasBase rdf:datatype="http://www.w3.org/2001/XMLSchema#double">60.0</hasBase>
+    <hasBase rdf:datatype="http://www.w3.org/2001/XMLSchema#double">25.0</hasBase>
+    <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">45.0</hasHeight>
+    <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">40.0</hasHeight>
+    <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">65.0</hasHeight>
+    <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">30.0</hasHeight>
+    <hasArea rdf:datatype="http://www.w3.org/2001/XMLSchema#double">765.0</hasArea>
+    <hasArea rdf:datatype="http://www.w3.org/2001/XMLSchema#double">900.0</hasArea>
+    <hasArea rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1950.0</hasArea>
+    <hasArea rdf:datatype="http://www.w3.org/2001/XMLSchema#double">375.0</hasArea>
+    <hasPerimeter rdf:datatype="http://www.w3.org/2001/XMLSchema#double">135.4003546088143</hasPerimeter>
+    <hasPerimeter rdf:datatype="http://www.w3.org/2001/XMLSchema#double">145.20797289396148</hasPerimeter>
+    <hasPerimeter rdf:datatype="http://www.w3.org/2001/XMLSchema#double">213.45903006477067</hasPerimeter>
+    <hasPerimeter rdf:datatype="http://www.w3.org/2001/XMLSchema#double">94.05124837953326</hasPerimeter>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3dcefc760f6c4da595f861977d9dfab5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#isContainedIn"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/GeometricShape"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N74f63bad96554d07ae8801505e08d724">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasFoci"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#Point"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5f70b7638a5d47b8ae622b31f7f4c6ba">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasOppositeSides"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Rectangle"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0398fcf0610543d297e6eaf9b720b71f">
+    <rdf:first rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Rectangle"/>
+    <rdf:rest rdf:nodeID="Na084145f39054e3688f0a6b19af21421"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc67ef402c2a34910a72f94c34f4d058d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasAdjacentShape"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Polygon"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc29a071917684c97a26e27d35921a86f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasCenter"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onClass rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#Point"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9636c4122af942c7848137ef1d18bce5">
+    <rdf:first rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Pentagon"/>
+    <rdf:rest rdf:nodeID="N0398fcf0610543d297e6eaf9b720b71f"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#isContainedIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="N43174c4f20d14e71b50a49a288791df0"/>
+    <rdfs:range rdf:nodeID="N3dcefc760f6c4da595f861977d9dfab5"/>
+    <rdfs:comment>Represents the relationship between a geometric shape being contained within another (Ex.a circle inscribed in a square).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Hexagon">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Polygon"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:comment>This is an ontology of basic math shapes</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na12f9697535346f78d2478e3635a810e">
+    <rdf:first rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Hexagon"/>
+    <rdf:rest rdf:nodeID="Nff7982e49e114ce0a0544e3bc32e98d4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Naadf021d98704b9b955e2945c999da15">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasDiagonal"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+    <owl:onClass rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Rhombus"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1f536ec81c1d4e348f868d7807059a40">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#isInscribedIn"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Polygon"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasArea">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#Point"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Circle"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Ellipse"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/GeometricShape"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Hexagon"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Octagon"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Pentagon"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Polygon"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Rectangle"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Rhombus"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Square"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Trapezoid"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Triangle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:comment xml:lang="en">Area of the shape (e.g., triangle, circle).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb6d162ec9c144ac2a4e2c0f8e13891a2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasCenter"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onClass rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Circle"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd7fd2fa444684a6187e46202c1b24e31">
+    <rdf:first rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Trapezoid"/>
+    <rdf:rest rdf:nodeID="N5b0dc902041a4e0b995ccc0e0c8ee22d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasMajorAxis">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Ellipse"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:comment xml:lang="en">Major axis of an ellipse.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/circle1">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Circle"/>
+    <hasRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7.0</hasRadius>
+    <hasArea rdf:datatype="http://www.w3.org/2001/XMLSchema#double">153.93804002589985</hasArea>
+    <hasPerimeter rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.982297150257104</hasPerimeter>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7832332be1b64030983665066ba89076">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasDiagonal"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Polygon"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb61cc0be7b674f46bb37b389a72463a2">
+    <rdf:first rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Square"/>
+    <rdf:rest rdf:nodeID="Nd7fd2fa444684a6187e46202c1b24e31"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N571a0d0cf10847b18415cf6923497cdb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology#hasDiagonal"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+    <owl:onClass rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Square"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Square">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Polygon"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Triangle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Polygon"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/square1">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Square"/>
+    <hasSide rdf:datatype="http://www.w3.org/2001/XMLSchema#double">40.0</hasSide>
+    <hasArea rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1600.0</hasArea>
+    <hasPerimeter rdf:datatype="http://www.w3.org/2001/XMLSchema#double">160.0</hasPerimeter>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/trapezoid1">
+    <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Trapezoid"/>
+    <hasBase1 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">45.0</hasBase1>
+    <hasBase2 rdf:datatype="http://www.w3.org/2001/XMLSchema#double">34.0</hasBase2>
+    <hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">23.0</hasHeight>
+    <hasArea rdf:datatype="http://www.w3.org/2001/XMLSchema#double">908.5</hasArea>
+    <hasPerimeter rdf:datatype="http://www.w3.org/2001/XMLSchema#double">126.29693436154187</hasPerimeter>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Rhombus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Polygon"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Octagon">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Polygon"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Ellipse">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/GeometricShape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Circle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/GeometricShape"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5b0dc902041a4e0b995ccc0e0c8ee22d">
+    <rdf:first rdf:resource="http://www.semanticweb.org/dell/ontologies/2024/11/aic_final_ontology/Triangle"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+</rdf:RDF>
